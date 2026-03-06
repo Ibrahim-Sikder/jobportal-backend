@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
-    "start": "node dist/server.js -p 8000",
-    "dev": "npx ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "node init && tsc",
+    "start": "node init && node dist/server.js -p 8000",
+    "dev": "node init && npx ts-node-dev --respawn --transpile-only src/server.ts",
     "lint:fix": "npm run lint --fix",
     "prepare": "husky install",
     "prettier": "npx prettier --write src",
